@@ -10,9 +10,6 @@ Dark green: #28b485
     padding: 0;
     box-sizing: border-box; 
 }
-/* box-sizing 요소 
-box model을 바꾼다. border, padding 값이 더이상 total height, width에
-포함되지 않음.*/
 
 body {
     font-family: "Lato", sans-serif;
@@ -31,10 +28,82 @@ body {
       url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
+    position: relative;
+
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-/*vh 요소는 높이값(뷰포트 높이값)의 100분의 1의 단위이다. 
-예를 들어, 브라우저의 높이값이 900px일 때 1vh는 9px이라는 뜻이 된다.
-(최대 높이값은 100vh)
-background-position : top / 위쪽은 고정되도록 background가 설정됨
-clippy-css clip-path maker*/
+
+.logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px; /* width가 알아서 height에 맞춰서 변함 */
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden; /* fix shaking*/
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+    0% {
+            opacity: 0;
+            transform: translateX(-100PX);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); /* looks exactly right now */
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+            opacity: 0;
+            transform: translateX(100PX);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); /* looks exactly right now */
+    }
+}
