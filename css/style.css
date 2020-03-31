@@ -64,7 +64,6 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
-
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
@@ -110,6 +109,18 @@ body {
     }
 }
 
+@keyframes moveInBottom {
+    0% {
+            opacity: 0;
+            transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0); /* looks exactly right now */
+    }
+}
+
 .btn:link, 
 .btn:visited {
     text-transform: uppercase;
@@ -118,6 +129,7 @@ body {
     display: inline-block;
     border-radius: 100px;
     transition: all .2s;
+    position: relative
 }
 
 /* box-shadow: <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> 
@@ -136,4 +148,30 @@ body {
     background-color: #fff;
     color: #777;
 }
+/* (!).btn의 child로 새로 삽입됨 */
+.btn::after {
+    content: ""; /* ::after 뒤에는 content가 무조건 들어가야함 */
+    display: inline-block;
+    height: 100%; /*::after은 btn의 child로 삽입되므로 가능 */
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
 
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; /*animation이 시작하기 전에 처음 0%부터 시작할 수 있도록 한다*/
+}
