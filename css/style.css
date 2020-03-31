@@ -48,6 +48,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center; /*for moving inline-block button*/
 }
 
 .heading-primary {
@@ -55,6 +56,7 @@ body {
     text-transform: uppercase;
 
     backface-visibility: hidden; /* fix shaking*/
+    margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -107,3 +109,31 @@ body {
         transform: translate(0); /* looks exactly right now */
     }
 }
+
+.btn:link, 
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+}
+
+/* box-shadow: <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> 
+   <흐림 정도>는 값이 커질수록 부드러운 그림자를 표시함*/
+.btn:hover {
+    transform: translateY(-3px); /*related to the initial link & visited state*/
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active {
+    transform: translateY(-1px); /* (!important) related to the initial state which is link & visited part not hover part*/
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
