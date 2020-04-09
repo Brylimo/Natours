@@ -18,9 +18,96 @@ Advanced CSS and Sass
     * Control directives: for writing complex code using conditionals and loops.
     
     ```shell
-# Usage
-$ ./assembler sample_input/example1.s   # This will produce sample_input/example1.o
+    <!--html-->
+    <nav class="clearfix">
+        <ul class="navigation">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="button">
+            <a class="btn-main" href="#">Sign up</a>
+            <a class="btn-hot" href="#">Get a quote</a>
+        </div>
+    </nav>
+    ```
+    
+    
+    ```shell
+    * {
+      margin: 0;
+      padding: 0;
+    }
 
-# Test
-$ make test # This will test all examples in sample_output
-```
+    $color-primary: #f9ed69; //yellow
+    $color-secondary: #f08a5d;
+    $color-tertiary: #b83b5e;
+    $color-text-dark: #333;
+    $color-text-light: #eee;
+
+    $width-button: 150px;
+    nav {
+      margin: 30px;
+      background-color: $color-primary;
+
+      &::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    }
+
+    .navigation {
+      list-style: none;
+      float: left;
+
+      li {
+        display: inline-block;
+        margin-left: 30px;
+
+        &:first-child { //.navigation li:first-child
+          margin: 0;
+        }
+
+        a:link {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $color-text-dark; 
+        }
+      }
+    }
+
+    .button {
+      float: right;
+    }
+
+    .btn-main:link,
+    .btn-hot:link {
+      padding: 10px;
+      display: inline-block;
+      text-align: center;
+      border-radius: 100px;
+      text-decoration: none;
+      text-transform: uppercase;
+      width: $width-button;
+      color: $color-text-light;
+    }
+
+    .btn-main {
+      &:link {
+        background-color: $color-secondary;
+      }
+      &:hover {
+        background-color: darken($color-secondary, 15%);
+      }
+    }
+
+    .btn-hot {
+      &:link {
+        background-color: $color-tertiary;
+      }
+      &:hover {
+        background-color: darken($color-tertiary, 10%);
+      }
+    }
+    ```
