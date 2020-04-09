@@ -17,6 +17,7 @@ Advanced CSS and Sass
     * Extends: to make different selectors inherit declarations that are common to all of them.
     * Control directives: for writing complex code using conditionals and loops.
     
+    ### EXAMPLE(nav bar)
     ```shell
     <!--html-->
     <nav class="clearfix">
@@ -34,6 +35,7 @@ Advanced CSS and Sass
     
     
     ```shell
+    // SCSS
     * {
       margin: 0;
       padding: 0;
