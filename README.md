@@ -15,3 +15,4 @@ Advanced CSS and Sass
     * Mixins: to wirte reusable pieces off CSS code.
     * Functions: similar to mixins, with the difference that they produce a value that can be used.
     * Extends: to make different selectors inherit declarations that are common to all of them.
+    * Control directives: for writing complex code using conditionals and loops.
