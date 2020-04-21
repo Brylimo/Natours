@@ -125,3 +125,7 @@ Advanced CSS and Sass
       }
     }
     ```
+2. live-server  
+    It automaticlly detects whether the source code files have changed and implements them without reloading.
+    * npm install live-server -g (install live-server globally)
+    >($) live-server  
