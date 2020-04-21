@@ -1,137 +1,109 @@
-/*
-COLORS:
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-*/
-
+@charset "UTF-8";
 *,
-*::after,    /* ::after와 ::before일 때도 적용됨 */
+*::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit; /*box-sizing은 상속이 안되지만
-    box-sizing: inherit;을 선언함으로서 상속이 가능하게됨.*/
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /*box-sizing은 상속이 안되지만
+    box-sizing: inherit;을 선언함으로서 상속이 가능하게됨.*/ }
 
 html {
-    font-size: 62.5%; /*set the root font size to use rem*/
-} /*we set the root font size in html tag (1rem = 10px from now)*/
+  font-size: 62.5%;
+  /*set the root font size to use rem*/ }
+
+/*we set the root font size in html tag (1rem = 10px from now)*/
 /*root pont size를 px로 하는건 안좋고 다음과 같이 16px을 기준으로 %로 설정한다.*/
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
-    /*font-size: 16px;*/
-    line-height: 1.7;
-    color: #777;
-    padding: 3rem; /*padding can't get inheritence.*/
-
-    box-sizing: border-box; /* 하는게 좋음 */
-}
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  /*padding can't get inheritence.*/
+  box-sizing: border-box;
+  /* 하는게 좋음 */ }
 
 .header {
-    height: 95vh; 
-    background-image: linear-gradient(to right bottom,
-     rgba(126, 213, 111, 0.8),
-     rgba(40, 180, 131, 0.8)),
-      url(../img/hero.jpg);
-    background-size: cover;
-    background-position: top;
-    position: relative;
-
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
-
-.header__logo-box {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
     position: absolute;
     top: 4rem;
-    left: 4rem;
-}
-
-.header__logo {
-    height: 3.5rem; /* width가 알아서 height에 맞춰서 변함 */
-}
-
-.header__text-box {
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    /* width가 알아서 height에 맞춰서 변함 */ }
+  .header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; /*for moving inline-block button*/
-}
+    text-align: center;
+    /*for moving inline-block button*/ }
 
 .heading-primary {
-    color: #fff;
-    text-transform: uppercase;
-
-    backface-visibility: hidden; /* fix shaking*/
-    margin-bottom: 6rem;
-}
-
-.heading-primary--main {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* fix shaking*/
+  margin-bottom: 6rem; }
+  .heading-primary--main {
     display: block;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-
-.heading-primary--sub {
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out;
-}
+    animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
-    0% {
-            opacity: 0;
-            transform: translateX(-10rem);
-    }
-
-    80% {
-        transform: translateX(1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0); /* looks exactly right now */
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /* looks exactly right now */ } }
 
 @keyframes moveInRight {
-    0% {
-            opacity: 0;
-            transform: translateX(10rem);
-    }
-
-    80% {
-        transform: translateX(-1rem);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(0); /* looks exactly right now */
-    }
-}
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /* looks exactly right now */ } }
 
 @keyframes moveInBottom {
-    0% {
-            opacity: 0;
-            transform: translateY(3rem);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+    /* looks exactly right now */ } }
 
-    100% {
-        opacity: 1;
-        transform: translate(0); /* looks exactly right now */
-    }
-}
-
-.btn:link, 
-.btn:visited {
+.btn {
+  /* box-shadow: <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> 
+    <흐림 정도>는 값이 커질수록 부드러운 그림자를 표시함*/
+  /* (!).btn의 child로 새로 삽입됨(기본적으로 inline) */ }
+  .btn:link, .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 1.5rem 4rem;
@@ -139,49 +111,37 @@ body {
     border-radius: 10rem;
     transition: all .2s;
     position: relative;
-    font-size: 1.6rem;
-}
-
-/* box-shadow: <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> 
-   <흐림 정도>는 값이 커질수록 부드러운 그림자를 표시함*/
-.btn:hover {
-    transform: translateY(-.3rem); /*related to the initial link & visited state*/
-    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
-}
-
-.btn:active {
-    transform: translateY(-.1rem); /* (!important) related to the initial state which is link & visited part not hover part*/
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
-}
-
-.btn--white {
+    font-size: 1.6rem; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    /*related to the initial link & visited state*/
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-0.1rem);
+    /* (!important) related to the initial state which is link & visited part not hover part*/
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn--white {
     background-color: #fff;
-    color: #777;
-}
-/* (!).btn의 child로 새로 삽입됨(기본적으로 inline) */
-.btn::after {
-    content: ""; /* ::after 뒤에는 content가 무조건 들어가야함 */
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn::after {
+    content: "";
+    /* ::after 뒤에는 content가 무조건 들어가야함 */
     display: inline-block;
-    height: 100%; /*::after은 btn의 child로 삽입되므로 가능 */
+    height: 100%;
+    /*::after은 btn의 child로 삽입되므로 가능 */
     width: 100%;
     border-radius: 10rem;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all .4s;
-}
-
-.btn--white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-}
-
-.btn--animated {
+    transition: all .4s; }
+  .btn--animated {
     animation: moveInBottom .5s ease-out .75s;
-    animation-fill-mode: backwards; /*animation이 시작하기 전에 처음 0%부터 시작할 수 있도록 한다*/
-}
+    animation-fill-mode: backwards;
+    /*animation이 시작하기 전에 처음 0%부터 시작할 수 있도록 한다*/ }
