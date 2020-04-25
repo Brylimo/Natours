@@ -139,6 +139,6 @@ Advanced CSS and Sass
   
 4. 7-1 pattern  
 : 7 folders & 1 main Sass file
-    * partial files are started with underscore. eg) "\_base.scss".
+    * partial files are started with underscore. eg) "\_base.scss"
     * import partial files using _@import_ in main Sass file.
     * You should not put underscore and .scss when you import partial files to main Sass file. eg) '@import "base/base"' 
