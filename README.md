@@ -129,3 +129,10 @@ Advanced CSS and Sass
     It automaticlly detects whether the source code files have changed and implements them without reloading.
     * npm install live-server -g (install live-server globally)
     >($) live-server  
+  
+3. npm run compile:sass  
+    In the package.json file, we can set the "scripts" part as   
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"  
+    
+    ->(name of the package) (input file) (output file) -w // if we set -w flag here, whenever we change         something on the Sass code, it automatically reflects them on the css code.  
+    >($) npm run compile:sass  
