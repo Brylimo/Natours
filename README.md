@@ -135,4 +135,10 @@ Advanced CSS and Sass
     "compile:sass": "node-sass sass/main.scss css/style.css -w"  
     
     ->(name of the package) (input file) (output file) -w // if we set -w flag here, whenever we change         something on the Sass code, it automatically reflects them on the css code.  
-    >($) npm run compile:sass  
+    >($) npm run compile:sass    
+  
+4. 7-1 pattern  
+: 7 folders & 1 main Sass file
+    * partial files are started with underscore. eg) "\_base.scss".
+    * import partial files using _@import_ in main Sass file.
+    * You should not put underscore and .scss when you import partial files to main Sass file. eg) '@import "base/base"' 
