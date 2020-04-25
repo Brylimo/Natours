@@ -1,73 +1,4 @@
 @charset "UTF-8";
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-  /*box-sizing은 상속이 안되지만
-    box-sizing: inherit;을 선언함으로서 상속이 가능하게됨.*/ }
-
-html {
-  font-size: 62.5%;
-  /*set the root font size to use rem*/ }
-
-/*we set the root font size in html tag (1rem = 10px from now)*/
-/*root pont size를 px로 하는건 안좋고 다음과 같이 16px을 기준으로 %로 설정한다.*/
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  /*font-size: 16px;*/
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
-  /*padding can't get inheritence.*/
-  box-sizing: border-box;
-  /* 하는게 좋음 */ }
-
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem;
-    /* width가 알아서 height에 맞춰서 변함 */ }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    /*for moving inline-block button*/ }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* fix shaking*/
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation: moveInRight 1s ease-out; }
-
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -98,6 +29,57 @@ body {
     opacity: 1;
     transform: translate(0);
     /* looks exactly right now */ } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /*box-sizing은 상속이 안되지만
+    box-sizing: inherit;을 선언함으로서 상속이 가능하게됨.*/ }
+
+html {
+  font-size: 62.5%;
+  /*set the root font size to use rem*/ }
+
+/*we set the root font size in html tag (1rem = 10px from now)*/
+/*root pont size를 px로 하는건 안좋고 다음과 같이 16px을 기준으로 %로 설정한다.*/
+body {
+  box-sizing: border-box;
+  /* 하는게 좋음 */ }
+
+/*typography: the design of the writing in a piece of printing
+ or a computer screen*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  /*padding can't get inheritence.*/ }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* fix shaking*/
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn {
   /* box-shadow: <수평 거리> <수직 거리> <흐림 정도> <번짐 정도> <색상> 
@@ -145,3 +127,25 @@ body {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards;
     /*animation이 시작하기 전에 처음 0%부터 시작할 수 있도록 한다*/ }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem;
+    /* width가 알아서 height에 맞춰서 변함 */ }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*for moving inline-block button*/ }

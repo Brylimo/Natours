@@ -1,0 +1,20 @@
+//basic definition about our entire project
+*,
+*::after,    /* ::after와 ::before일 때도 적용됨 */
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /*box-sizing은 상속이 안되지만
+    box-sizing: inherit;을 선언함으로서 상속이 가능하게됨.*/
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; /*set the root font size to use rem*/
+} /*we set the root font size in html tag (1rem = 10px from now)*/
+/*root pont size를 px로 하는건 안좋고 다음과 같이 16px을 기준으로 %로 설정한다.*/
+// related more to overall settings. thus not in the typography
+
+body {
+    box-sizing: border-box; /* 하는게 좋음 */
+}
