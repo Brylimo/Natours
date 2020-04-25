@@ -155,3 +155,6 @@ Advanced CSS and Sass
     3. calc()  
        :Calculation function but we can mix units while using it.  
        -> You gotta use #{Sass variable} when you want to use Sass variables  
+       
+    4. [alt="logo"] {...}  
+       :It selcets all of the elements which have this alt attribute equal to "logo".  
