@@ -142,3 +142,16 @@ Advanced CSS and Sass
     * partial files are started with underscore. eg) "\_base.scss"
     * import partial files using _@import_ in main Sass file.
     * You should not put underscore and .scss when you import partial files to main Sass file. eg) '@import "base/base"' 
+    
+5. GRID practice  
+    1. max-width  
+       :If we have enough available space, then it will have the width that we've specified. However, if there's not enough width,
+       then it will simply fill 100% of the available space that it has.  
+       
+    2. &:not(:last-child) {...}   
+       :Without ":not", it will simply select the last child. What it does here is opposite of this action.  
+       So, basically, we select everything except last child.  
+       
+    3. calc()  
+       :Calculation function but we can mix units while using it.  
+       -> You gotta use #{Sass variable} when you want to use Sass variables  
