@@ -131,10 +131,7 @@ body {
 .row {
   max-width: 114rem;
   background-color: #eee;
-  margin: 0 auto;
-  /* [alt="Logo"] {
-        selcet all of the elements which have this alt attribute equal to "logo".
-    } */ }
+  margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row::after {
