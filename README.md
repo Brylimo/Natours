@@ -125,25 +125,30 @@ Advanced CSS and Sass
       }
     }
     ```
-2. live-server  
+2. npm  
+    >($)npm init  
+    >($)npm install node-sass --save-dev    // installed as devDependencies(tool for the development)  
+    
+3. live-server  
     It automaticlly detects whether the source code files have changed and implements them without reloading.
     * npm install live-server -g (install live-server globally)
     >($) live-server  
   
-3. npm run compile:sass  
+4. npm run compile:sass  
     In the package.json file, we can set the "scripts" part as   
     "compile:sass": "node-sass sass/main.scss css/style.css -w"  
     
-    ->(name of the package) (input file) (output file) -w // if we set -w flag here, whenever we change         something on the Sass code, it automatically reflects them on the css code.  
+    ->(name of the package) (input file) (output file) -w // if we set -w flag here,  
+    whenever we change something on the Sass code, it automatically reflects them on the css code.  
     >($) npm run compile:sass    
   
-4. 7-1 pattern  
+5. 7-1 pattern  
 : 7 folders & 1 main Sass file
     * partial files are started with underscore. eg) "\_base.scss"
     * import partial files using _@import_ in main Sass file.
     * You should not put underscore and .scss when you import partial files to main Sass file. eg) '@import "base/base"' 
     
-5. GRID practice  
+6. GRID practice  
     1. max-width  
        :If we have enough available space, then it will have the width that we've specified. However, if there's not enough width,
        then it will simply fill 100% of the available space that it has.  
@@ -159,7 +164,7 @@ Advanced CSS and Sass
     4. [alt="logo"] {...}  
        :It selcets all of the elements which have this alt attribute equal to "logo".  
        
-6. About section  
+7. About section  
     1. \<main\> tag   
         :this is one of the HTML5 elements that tells search engines or screen readers that this is the real main part of our site.  
         It will contain most of the website components.  
