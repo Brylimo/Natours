@@ -172,3 +172,5 @@ Advanced CSS and Sass
         :background is clipped exactly where the text is.  
         It's a new thing in CSS so it needs -webkit- prefix. Thus, <code>-webkit-background-clip: text;</code>    
         
+    4.Special symbols/characters for HTML5  
+        ->codingheroes: https://css-tricks.com/snippets/html/glyphs/
