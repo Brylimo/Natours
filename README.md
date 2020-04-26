@@ -158,3 +158,17 @@ Advanced CSS and Sass
        
     4. [alt="logo"] {...}  
        :It selcets all of the elements which have this alt attribute equal to "logo".  
+       
+6. About section  
+    1. \<main\> tag   
+        :this is one of the HTML5 elements that tells search engines or screen readers that this is the real main part of our site.  
+        It will contain most of the website components.  
+    
+    2. Emmet  
+        :Extension that you can install in your text editor. It allows you to write HTML a lot faster and easier.  
+        eg) \<div\> tag -> '.' + class name and 'tab' / \<section\> tag -> 'section.section-about' + 'tab'  
+        
+    3. background-clip: text;  
+        :background is clipped exactly where the text is.  
+        It's a new thing in CSS so it needs -webkit- prefix. Thus, <code>-webkit-background-clip: text;</code>    
+        
