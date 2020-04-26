@@ -1,6 +1,5 @@
 .row {
     max-width: $grid-width;
-    background-color: #eee;
     margin: 0 auto;
 
     &:not(:last-child) {
@@ -10,7 +9,6 @@
     @include clearfix;
 
     [class^="col-"] { //all the class attribute starts with col-
-        background-color: orangered;
         float: left; //모두가 float하면 row selector의 height가 0이므로 clear해줘야함.
 
         &:not(:last-child) {
