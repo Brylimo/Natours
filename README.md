@@ -178,4 +178,11 @@ Advanced CSS and Sass
         It's a new thing in CSS so it needs -webkit- prefix. Thus, <code>-webkit-background-clip: text;</code>    
         
     4. Special symbols/characters for HTML5  
-        ->codingheroes: https://css-tricks.com/snippets/html/glyphs/
+        ->codingheroes: https://css-tricks.com/snippets/html/glyphs/  
+        
+    5. Outline related CSS properties    
+        * outline    
+        :makes outline to the element.  
+        
+        * outline-offset  
+        :this property will give space between the outline and element that the outline is applied.  
