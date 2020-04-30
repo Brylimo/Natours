@@ -14,6 +14,7 @@
     background-size: cover;
     transform: skewY(-7deg);
     margin-top: -10rem;
+    
     & > * { // direct child selector
         transform: skewY(7deg);
     }
