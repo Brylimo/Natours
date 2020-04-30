@@ -186,3 +186,19 @@ Advanced CSS and Sass
         
         * outline-offset  
         :this property will give space between the outline and element that the outline is applied.  
+        
+8. Features section  
+    1. icon(https://linea.io/)  
+        Download All Icons -> \_basic -> \_ICONFONT -> Copy fonts folder and styles.css  
+        (You can refer how it looks like by icons-reference.html)  
+        * icon font is also a text
+        * scalable
+        * different formats files are in the 'fonts folder'  
+        
+        <code><link rel="stylesheet" href="css/icon-font.css></code> 
+    
+    2. child selector  
+    :하위 요소 전체에 스타일을 적용하는 것이 아니라 자식 요소에만 스타일을 적용할 수 있다.  
+    <code>parent element > child element</code>  
+        
+    
