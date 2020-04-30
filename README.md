@@ -189,7 +189,7 @@ Advanced CSS and Sass
         
 8. Features section  
     1. icon(https://linea.io/)  
-        Download All Icons -> \_basic -> \_ICONFONT -> Copy fonts folder and styles.css  
+        Download All Icons -> \_basic -> \_ICONFONT -> Copy fonts folder and styles.css(icon-font.css)  
         (You can refer how it looks like by icons-reference.html)  
         * icon font is also a text
         * scalable
