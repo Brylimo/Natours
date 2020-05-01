@@ -200,5 +200,17 @@ Advanced CSS and Sass
     2. child selector  
     :하위 요소 전체에 스타일을 적용하는 것이 아니라 자식 요소에만 스타일을 적용할 수 있다.  
     <code>parent element > child element</code>  
+    
+9. Tours section  
+    1. Photos(https://unsplash.com/)  
+    
+    2.  background-blend-mode  
+    :It makes gradient or colors blend with images.  
+    It's also a new added thing in CSS so it isn't applied in Internet Explorer browser.  
+    <code>background-blend-mode: screen;</code>  
+    
+    3. box-decoration-break   
+    :문장 잘라졌을 때 서로 다른걸로 인식시켜줘서 따로따로 패딩이 가능하게 함.  
+    <code>box-decoration-break: clone;</code>  
         
     
