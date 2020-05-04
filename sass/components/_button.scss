@@ -38,6 +38,15 @@
             background-color: $color-white;
         }    
     }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }    
+    }
     /* (!).btn의 child로 새로 삽입됨(기본적으로 inline) */
     &::after {
         content: ""; /* ::after 뒤에는 content가 무조건 들어가야함 */
