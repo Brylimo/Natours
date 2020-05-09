@@ -223,3 +223,10 @@ Advanced CSS and Sass
     :필터링 속성 적용  
     eg) <code>filter: blur(3px) brightness(80%);</code>  
     
+    3. Videos(https://coverr.co)   
+    mp4, webm -> adaptable to almost all browsers    
+    
+    4. <code>object-fit: cover;</code>  
+    :pretty similar to <code>background-size: cover</code>  
+    element(video in this case) fills the entire parent while still maintaining its aspect ratio.  
+    (It works with HTML elements or videos.)  
