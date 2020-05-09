@@ -212,5 +212,10 @@ Advanced CSS and Sass
     3. box-decoration-break   
     :문장 잘라졌을 때 서로 다른걸로 인식시켜줘서 따로따로 패딩이 가능하게 함.  
     <code>box-decoration-break: clone;</code>  
-        
+    
+10. Stories section  
+    1. shape-outside property  
+    :uses vectorize shape here like clip-path property / float and height, width property are essential to use this property  
+    -> 주변 글자나 파트들을 지정된 모양으로 element를 둘러싸도록 만든다.  
+    eg) shape-outside: circle(50% at 50% 50%) // (radius of the circle, at focus position)  
     
