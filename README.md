@@ -219,3 +219,7 @@ Advanced CSS and Sass
     -> 주변 글자나 파트들을 지정된 모양으로 element를 둘러싸도록 만든다.  
     eg) shape-outside: circle(50% at 50% 50%) // (radius of the circle, at focus position)  
     
+    2. filter  
+    :필터링 속성 적용  
+    eg) <code>filter: blur(3px) brightness(80%);</code>  
+    
