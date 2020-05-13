@@ -229,19 +229,12 @@ Advanced CSS and Sass
     4. <code>object-fit: cover;</code>  
     :pretty similar to <code>background-size: cover</code>  
     element(video in this case) fills the entire parent while still maintaining its aspect ratio.  
-    (It works with HTML elements or videos.)  
-    
+    (It works with HTML elements or videos.)       
+                 
 11. Booking section  
     1. solid-color gradient  
-    
-    ```shell
-    background-image: linear-gradient(105deg,
-                                      rgba($color-white, .9) 0%,
-                                      rgba($color-white, .9) 50%,
-                                    transparent 50%),
-                                url(../img/nat-10.jpg);
-    ```  
-    - 105deg rotate, 50% 부분까지 <code>$color-white</code> 유지 그리고 <code>transparent</code>가 다시 50%부터 시작되므로 그라데이션 없이 색깔이 바뀜.(solid-color gradient)  
-    
+    <code>background-image: linear-gradient(105deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url(../img/nat-10.jpg);</code>  
+    -> 105deg rotate, 50% 부분까지 <code>$color-white</code> 유지 그리고 <code>transparent</code>가 다시 50%부터 시작되므로 그라데이션 없이 색깔이 바뀜.(solid-color gradient)     
+          
     2. \<label\> tag  
-    - for 프로퍼티에 \<input\> tag의 id를 전달함으로서 \<input\> tag와 연결시킬 수 있음.  
+    -> for 프로퍼티에 \<input\> tag의 id를 전달함으로서 \<input\> tag와 연결시킬 수 있음.  
